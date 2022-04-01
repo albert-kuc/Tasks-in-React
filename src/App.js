@@ -10,6 +10,10 @@ const App = () => {
     { text: 'Finish the course!', id: 'g2' }
   ]);
 
+  /**
+   * Appends enteredText as a new element with text and id to the beginning of the courseGoals array.
+   * @param enteredText
+   */
   const addGoalHandler = enteredText => {
     setCourseGoals(prevGoals => {
       const updatedGoals = [...prevGoals];
@@ -18,6 +22,10 @@ const App = () => {
     });
   };
 
+  /**
+   * Removes element with id matching goalId from courseGoals array.
+   * @param goalId
+   */
   const deleteItemHandler = goalId => {
     setCourseGoals(prevGoals => {
       const updatedGoals = prevGoals.filter(goal => goal.id !== goalId);
